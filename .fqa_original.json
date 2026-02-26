@@ -1,5 +1,5 @@
 {
-  "name": "Jahutus 2K",
+  "name": "AC Mitsubishi",
   "type": "com.fibaro.genericDevice",
   "apiVersion": "1.3",
   "initialProperties": {
@@ -10,10 +10,136 @@
             "style": {
               "height": "0"
             },
-            "title": "quickApp_device_668"
+            "title": "quickApp_device_82"
           },
           "sections": {
             "items": [
+              {
+                "components": [
+                  {
+                    "name": "lblPowerList",
+                    "style": {
+                      "weight": "1.2"
+                    },
+                    "text": "Power",
+                    "type": "label",
+                    "visible": true
+                  },
+                  {
+                    "style": {
+                      "weight": "0.5"
+                    },
+                    "type": "space"
+                  }
+                ],
+                "style": {
+                  "weight": "1.2"
+                },
+                "type": "vertical"
+              },
+              {
+                "components": [
+                  {
+                    "components": [
+                      {
+                        "name": "ModePowerOn",
+                        "style": {
+                          "weight": "0.50"
+                        },
+                        "text": "On",
+                        "type": "button",
+                        "visible": true
+                      },
+                      {
+                        "name": "ModePowerOff",
+                        "style": {
+                          "weight": "0.50"
+                        },
+                        "text": "Off",
+                        "type": "button",
+                        "visible": true
+                      }
+                    ],
+                    "style": {
+                      "weight": "1.2"
+                    },
+                    "type": "horizontal"
+                  },
+                  {
+                    "style": {
+                      "weight": "0.5"
+                    },
+                    "type": "space"
+                  }
+                ],
+                "style": {
+                  "weight": "1.2"
+                },
+                "type": "vertical"
+              },
+              {
+                "components": [
+                  {
+                    "name": "lblSetpointTemp",
+                    "style": {
+                      "weight": "1.2"
+                    },
+                    "text": "Setpoint",
+                    "type": "label",
+                    "visible": true
+                  },
+                  {
+                    "style": {
+                      "weight": "0.5"
+                    },
+                    "type": "space"
+                  }
+                ],
+                "style": {
+                  "weight": "1.2"
+                },
+                "type": "vertical"
+              },
+              {
+                "components": [
+                  {
+                    "components": [
+                      {
+                        "name": "SetpointMinu",
+                        "style": {
+                          "weight": "0.50"
+                        },
+                        "text": "-",
+                        "type": "button",
+                        "visible": true
+                      },
+                      {
+                        "name": "SetpointPlus",
+                        "style": {
+                          "weight": "0.50"
+                        },
+                        "text": "+",
+                        "type": "button",
+                        "visible": true
+                      }
+                    ],
+                    "style": {
+                      "weight": "1.2"
+                    },
+                    "type": "horizontal"
+                  },
+                  {
+                    "style": {
+                      "weight": "0.5"
+                    },
+                    "type": "space"
+                  }
+                ],
+                "style": {
+                  "weight": "1.2"
+                },
+                "type": "vertical"
+              },
               {
                 "components": [
                   {
@@ -74,159 +200,6 @@
                           "weight": "0.25"
                         },
                         "text": "VStrong",
-                        "type": "button",
-                        "visible": true
-                      }
-                    ],
-                    "style": {
-                      "weight": "1.2"
-                    },
-                    "type": "horizontal"
-                  },
-                  {
-                    "style": {
-                      "weight": "0.5"
-                    },
-                    "type": "space"
-                  }
-                ],
-                "style": {
-                  "weight": "1.2"
-                },
-                "type": "vertical"
-              },
-              {
-                "components": [
-                  {
-                    "name": "lblSetpointTemp",
-                    "style": {
-                      "weight": "1.2"
-                    },
-                    "text": "Setpoint",
-                    "type": "label",
-                    "visible": true
-                  },
-                  {
-                    "style": {
-                      "weight": "0.5"
-                    },
-                    "type": "space"
-                  }
-                ],
-                "style": {
-                  "weight": "1.2"
-                },
-                "type": "vertical"
-              },
-              {
-                "components": [
-                  {
-                    "components": [
-                      {
-                        "name": "SetpointPlus",
-                        "style": {
-                          "weight": "0.50"
-                        },
-                        "text": "+",
-                        "type": "button",
-                        "visible": true
-                      },
-                      {
-                        "name": "SetpointMinus",
-                        "style": {
-                          "weight": "0.50"
-                        },
-                        "text": "-",
-                        "type": "button",
-                        "visible": true
-                      }
-                    ],
-                    "style": {
-                      "weight": "1.2"
-                    },
-                    "type": "horizontal"
-                  },
-                  {
-                    "style": {
-                      "weight": "0.5"
-                    },
-                    "type": "space"
-                  }
-                ],
-                "style": {
-                  "weight": "1.2"
-                },
-                "type": "vertical"
-              },
-              {
-                "components": [
-                  {
-                    "name": "lblVaneList",
-                    "style": {
-                      "weight": "1.2"
-                    },
-                    "text": "Vane",
-                    "type": "label",
-                    "visible": true
-                  },
-                  {
-                    "style": {
-                      "weight": "0.5"
-                    },
-                    "type": "space"
-                  }
-                ],
-                "style": {
-                  "weight": "1.2"
-                },
-                "type": "vertical"
-              },
-              {
-                "components": [
-                  {
-                    "components": [
-                      {
-                        "name": "Position1",
-                        "style": {
-                          "weight": "0.20"
-                        },
-                        "text": "Pos1",
-                        "type": "button",
-                        "visible": true
-                      },
-                      {
-                        "name": "Position2",
-                        "style": {
-                          "weight": "0.20"
-                        },
-                        "text": "Pos2",
-                        "type": "button",
-                        "visible": true
-                      },
-                      {
-                        "name": "Position3",
-                        "style": {
-                          "weight": "0.20"
-                        },
-                        "text": "Pos3",
-                        "type": "button",
-                        "visible": true
-                      },
-                      {
-                        "name": "Position4",
-                        "style": {
-                          "weight": "0.20"
-                        },
-                        "text": "Pos4",
-                        "type": "button",
-                        "visible": true
-                      },
-                      {
-                        "name": "PositionAuto",
-                        "style": {
-                          "weight": "0.20"
-                        },
-                        "text": "Auto",
                         "type": "button",
                         "visible": true
                       }
@@ -341,11 +314,11 @@
               {
                 "components": [
                   {
-                    "name": "lblPowerList",
+                    "name": "lblVaneList",
                     "style": {
                       "weight": "1.2"
                     },
-                    "text": "Power",
+                    "text": "Vane",
                     "type": "label",
                     "visible": true
                   },
@@ -366,20 +339,47 @@
                   {
                     "components": [
                       {
-                        "name": "ModePowerOn",
+                        "name": "Position1",
                         "style": {
-                          "weight": "0.50"
+                          "weight": "0.20"
                         },
-                        "text": "On",
+                        "text": "Pos1",
                         "type": "button",
                         "visible": true
                       },
                       {
-                        "name": "ModePowerOff",
+                        "name": "Position2",
                         "style": {
-                          "weight": "0.50"
+                          "weight": "0.20"
                         },
-                        "text": "Off",
+                        "text": "Pos2",
+                        "type": "button",
+                        "visible": true
+                      },
+                      {
+                        "name": "Position3",
+                        "style": {
+                          "weight": "0.20"
+                        },
+                        "text": "Pos3",
+                        "type": "button",
+                        "visible": true
+                      },
+                      {
+                        "name": "Position4",
+                        "style": {
+                          "weight": "0.20"
+                        },
+                        "text": "Pos4",
+                        "type": "button",
+                        "visible": true
+                      },
+                      {
+                        "name": "PositionAuto",
+                        "style": {
+                          "weight": "0.20"
+                        },
+                        "text": "Auto",
                         "type": "button",
                         "visible": true
                       }
@@ -451,11 +451,249 @@
           }
         },
         "head": {
-          "title": "quickApp_device_668"
+          "title": "quickApp_device_82"
         }
       }
     },
     "uiView": [
+      {
+        "components": [
+          {
+            "name": "lblPowerList",
+            "style": {
+              "weight": "1.0"
+            },
+            "text": "Power",
+            "type": "label",
+            "visible": true
+          }
+        ],
+        "style": {
+          "weight": "1.0"
+        },
+        "type": "horizontal"
+      },
+      {
+        "components": [
+          {
+            "eventBinding": {
+              "onLongPressDown": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onLongPressDown",
+                      "ModePowerOn"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ],
+              "onLongPressReleased": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onLongPressReleased",
+                      "ModePowerOn"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ],
+              "onReleased": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onReleased",
+                      "ModePowerOn"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ]
+            },
+            "name": "ModePowerOn",
+            "style": {
+              "weight": "0.50"
+            },
+            "text": "On",
+            "type": "button",
+            "visible": true
+          },
+          {
+            "eventBinding": {
+              "onLongPressDown": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onLongPressDown",
+                      "ModePowerOff"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ],
+              "onLongPressReleased": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onLongPressReleased",
+                      "ModePowerOff"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ],
+              "onReleased": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onReleased",
+                      "ModePowerOff"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ]
+            },
+            "name": "ModePowerOff",
+            "style": {
+              "weight": "0.50"
+            },
+            "text": "Off",
+            "type": "button",
+            "visible": true
+          }
+        ],
+        "style": {
+          "weight": "1.0"
+        },
+        "type": "horizontal"
+      },
+      {
+        "components": [
+          {
+            "name": "lblSetpointTemp",
+            "style": {
+              "weight": "1.0"
+            },
+            "text": "Setpoint",
+            "type": "label",
+            "visible": true
+          }
+        ],
+        "style": {
+          "weight": "1.0"
+        },
+        "type": "horizontal"
+      },
+      {
+        "components": [
+          {
+            "eventBinding": {
+              "onLongPressDown": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onLongPressDown",
+                      "SetpointMinu"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ],
+              "onLongPressReleased": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onLongPressReleased",
+                      "SetpointMinu"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ],
+              "onReleased": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onReleased",
+                      "SetpointMinu"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ]
+            },
+            "name": "SetpointMinu",
+            "style": {
+              "weight": "0.50"
+            },
+            "text": "-",
+            "type": "button",
+            "visible": true
+          },
+          {
+            "eventBinding": {
+              "onLongPressDown": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onLongPressDown",
+                      "SetpointPlus"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ],
+              "onLongPressReleased": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onLongPressReleased",
+                      "SetpointPlus"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ],
+              "onReleased": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onReleased",
+                      "SetpointPlus"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ]
+            },
+            "name": "SetpointPlus",
+            "style": {
+              "weight": "0.50"
+            },
+            "text": "+",
+            "type": "button",
+            "visible": true
+          }
+        ],
+        "style": {
+          "weight": "1.0"
+        },
+        "type": "horizontal"
+      },
       {
         "components": [
           {
@@ -660,385 +898,6 @@
               "weight": "0.25"
             },
             "text": "VStrong",
-            "type": "button",
-            "visible": true
-          }
-        ],
-        "style": {
-          "weight": "1.0"
-        },
-        "type": "horizontal"
-      },
-      {
-        "components": [
-          {
-            "name": "lblSetpointTemp",
-            "style": {
-              "weight": "1.0"
-            },
-            "text": "Setpoint",
-            "type": "label",
-            "visible": true
-          }
-        ],
-        "style": {
-          "weight": "1.0"
-        },
-        "type": "horizontal"
-      },
-      {
-        "components": [
-          {
-            "eventBinding": {
-              "onLongPressDown": [
-                {
-                  "params": {
-                    "actionName": "UIAction",
-                    "args": [
-                      "onLongPressDown",
-                      "SetpointPlus"
-                    ]
-                  },
-                  "type": "deviceAction"
-                }
-              ],
-              "onLongPressReleased": [
-                {
-                  "params": {
-                    "actionName": "UIAction",
-                    "args": [
-                      "onLongPressReleased",
-                      "SetpointPlus"
-                    ]
-                  },
-                  "type": "deviceAction"
-                }
-              ],
-              "onReleased": [
-                {
-                  "params": {
-                    "actionName": "UIAction",
-                    "args": [
-                      "onReleased",
-                      "SetpointPlus"
-                    ]
-                  },
-                  "type": "deviceAction"
-                }
-              ]
-            },
-            "name": "SetpointPlus",
-            "style": {
-              "weight": "0.50"
-            },
-            "text": "+",
-            "type": "button",
-            "visible": true
-          },
-          {
-            "eventBinding": {
-              "onLongPressDown": [
-                {
-                  "params": {
-                    "actionName": "UIAction",
-                    "args": [
-                      "onLongPressDown",
-                      "SetpointMinus"
-                    ]
-                  },
-                  "type": "deviceAction"
-                }
-              ],
-              "onLongPressReleased": [
-                {
-                  "params": {
-                    "actionName": "UIAction",
-                    "args": [
-                      "onLongPressReleased",
-                      "SetpointMinus"
-                    ]
-                  },
-                  "type": "deviceAction"
-                }
-              ],
-              "onReleased": [
-                {
-                  "params": {
-                    "actionName": "UIAction",
-                    "args": [
-                      "onReleased",
-                      "SetpointMinus"
-                    ]
-                  },
-                  "type": "deviceAction"
-                }
-              ]
-            },
-            "name": "SetpointMinus",
-            "style": {
-              "weight": "0.50"
-            },
-            "text": "-",
-            "type": "button",
-            "visible": true
-          }
-        ],
-        "style": {
-          "weight": "1.0"
-        },
-        "type": "horizontal"
-      },
-      {
-        "components": [
-          {
-            "name": "lblVaneList",
-            "style": {
-              "weight": "1.0"
-            },
-            "text": "Vane",
-            "type": "label",
-            "visible": true
-          }
-        ],
-        "style": {
-          "weight": "1.0"
-        },
-        "type": "horizontal"
-      },
-      {
-        "components": [
-          {
-            "eventBinding": {
-              "onLongPressDown": [
-                {
-                  "params": {
-                    "actionName": "UIAction",
-                    "args": [
-                      "onLongPressDown",
-                      "Position1"
-                    ]
-                  },
-                  "type": "deviceAction"
-                }
-              ],
-              "onLongPressReleased": [
-                {
-                  "params": {
-                    "actionName": "UIAction",
-                    "args": [
-                      "onLongPressReleased",
-                      "Position1"
-                    ]
-                  },
-                  "type": "deviceAction"
-                }
-              ],
-              "onReleased": [
-                {
-                  "params": {
-                    "actionName": "UIAction",
-                    "args": [
-                      "onReleased",
-                      "Position1"
-                    ]
-                  },
-                  "type": "deviceAction"
-                }
-              ]
-            },
-            "name": "Position1",
-            "style": {
-              "weight": "0.20"
-            },
-            "text": "Pos1",
-            "type": "button",
-            "visible": true
-          },
-          {
-            "eventBinding": {
-              "onLongPressDown": [
-                {
-                  "params": {
-                    "actionName": "UIAction",
-                    "args": [
-                      "onLongPressDown",
-                      "Position2"
-                    ]
-                  },
-                  "type": "deviceAction"
-                }
-              ],
-              "onLongPressReleased": [
-                {
-                  "params": {
-                    "actionName": "UIAction",
-                    "args": [
-                      "onLongPressReleased",
-                      "Position2"
-                    ]
-                  },
-                  "type": "deviceAction"
-                }
-              ],
-              "onReleased": [
-                {
-                  "params": {
-                    "actionName": "UIAction",
-                    "args": [
-                      "onReleased",
-                      "Position2"
-                    ]
-                  },
-                  "type": "deviceAction"
-                }
-              ]
-            },
-            "name": "Position2",
-            "style": {
-              "weight": "0.20"
-            },
-            "text": "Pos2",
-            "type": "button",
-            "visible": true
-          },
-          {
-            "eventBinding": {
-              "onLongPressDown": [
-                {
-                  "params": {
-                    "actionName": "UIAction",
-                    "args": [
-                      "onLongPressDown",
-                      "Position3"
-                    ]
-                  },
-                  "type": "deviceAction"
-                }
-              ],
-              "onLongPressReleased": [
-                {
-                  "params": {
-                    "actionName": "UIAction",
-                    "args": [
-                      "onLongPressReleased",
-                      "Position3"
-                    ]
-                  },
-                  "type": "deviceAction"
-                }
-              ],
-              "onReleased": [
-                {
-                  "params": {
-                    "actionName": "UIAction",
-                    "args": [
-                      "onReleased",
-                      "Position3"
-                    ]
-                  },
-                  "type": "deviceAction"
-                }
-              ]
-            },
-            "name": "Position3",
-            "style": {
-              "weight": "0.20"
-            },
-            "text": "Pos3",
-            "type": "button",
-            "visible": true
-          },
-          {
-            "eventBinding": {
-              "onLongPressDown": [
-                {
-                  "params": {
-                    "actionName": "UIAction",
-                    "args": [
-                      "onLongPressDown",
-                      "Position4"
-                    ]
-                  },
-                  "type": "deviceAction"
-                }
-              ],
-              "onLongPressReleased": [
-                {
-                  "params": {
-                    "actionName": "UIAction",
-                    "args": [
-                      "onLongPressReleased",
-                      "Position4"
-                    ]
-                  },
-                  "type": "deviceAction"
-                }
-              ],
-              "onReleased": [
-                {
-                  "params": {
-                    "actionName": "UIAction",
-                    "args": [
-                      "onReleased",
-                      "Position4"
-                    ]
-                  },
-                  "type": "deviceAction"
-                }
-              ]
-            },
-            "name": "Position4",
-            "style": {
-              "weight": "0.20"
-            },
-            "text": "Pos4",
-            "type": "button",
-            "visible": true
-          },
-          {
-            "eventBinding": {
-              "onLongPressDown": [
-                {
-                  "params": {
-                    "actionName": "UIAction",
-                    "args": [
-                      "onLongPressDown",
-                      "PositionAuto"
-                    ]
-                  },
-                  "type": "deviceAction"
-                }
-              ],
-              "onLongPressReleased": [
-                {
-                  "params": {
-                    "actionName": "UIAction",
-                    "args": [
-                      "onLongPressReleased",
-                      "PositionAuto"
-                    ]
-                  },
-                  "type": "deviceAction"
-                }
-              ],
-              "onReleased": [
-                {
-                  "params": {
-                    "actionName": "UIAction",
-                    "args": [
-                      "onReleased",
-                      "PositionAuto"
-                    ]
-                  },
-                  "type": "deviceAction"
-                }
-              ]
-            },
-            "name": "PositionAuto",
-            "style": {
-              "weight": "0.20"
-            },
-            "text": "Auto",
             "type": "button",
             "visible": true
           }
@@ -1311,11 +1170,11 @@
       {
         "components": [
           {
-            "name": "lblPowerList",
+            "name": "lblVaneList",
             "style": {
               "weight": "1.0"
             },
-            "text": "Power",
+            "text": "Vane",
             "type": "label",
             "visible": true
           }
@@ -1335,7 +1194,7 @@
                     "actionName": "UIAction",
                     "args": [
                       "onLongPressDown",
-                      "ModePowerOn"
+                      "Position1"
                     ]
                   },
                   "type": "deviceAction"
@@ -1347,7 +1206,7 @@
                     "actionName": "UIAction",
                     "args": [
                       "onLongPressReleased",
-                      "ModePowerOn"
+                      "Position1"
                     ]
                   },
                   "type": "deviceAction"
@@ -1359,18 +1218,18 @@
                     "actionName": "UIAction",
                     "args": [
                       "onReleased",
-                      "ModePowerOn"
+                      "Position1"
                     ]
                   },
                   "type": "deviceAction"
                 }
               ]
             },
-            "name": "ModePowerOn",
+            "name": "Position1",
             "style": {
-              "weight": "0.50"
+              "weight": "0.20"
             },
-            "text": "On",
+            "text": "Pos1",
             "type": "button",
             "visible": true
           },
@@ -1382,7 +1241,7 @@
                     "actionName": "UIAction",
                     "args": [
                       "onLongPressDown",
-                      "ModePowerOff"
+                      "Position2"
                     ]
                   },
                   "type": "deviceAction"
@@ -1394,7 +1253,7 @@
                     "actionName": "UIAction",
                     "args": [
                       "onLongPressReleased",
-                      "ModePowerOff"
+                      "Position2"
                     ]
                   },
                   "type": "deviceAction"
@@ -1406,18 +1265,159 @@
                     "actionName": "UIAction",
                     "args": [
                       "onReleased",
-                      "ModePowerOff"
+                      "Position2"
                     ]
                   },
                   "type": "deviceAction"
                 }
               ]
             },
-            "name": "ModePowerOff",
+            "name": "Position2",
             "style": {
-              "weight": "0.50"
+              "weight": "0.20"
             },
-            "text": "Off",
+            "text": "Pos2",
+            "type": "button",
+            "visible": true
+          },
+          {
+            "eventBinding": {
+              "onLongPressDown": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onLongPressDown",
+                      "Position3"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ],
+              "onLongPressReleased": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onLongPressReleased",
+                      "Position3"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ],
+              "onReleased": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onReleased",
+                      "Position3"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ]
+            },
+            "name": "Position3",
+            "style": {
+              "weight": "0.20"
+            },
+            "text": "Pos3",
+            "type": "button",
+            "visible": true
+          },
+          {
+            "eventBinding": {
+              "onLongPressDown": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onLongPressDown",
+                      "Position4"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ],
+              "onLongPressReleased": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onLongPressReleased",
+                      "Position4"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ],
+              "onReleased": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onReleased",
+                      "Position4"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ]
+            },
+            "name": "Position4",
+            "style": {
+              "weight": "0.20"
+            },
+            "text": "Pos4",
+            "type": "button",
+            "visible": true
+          },
+          {
+            "eventBinding": {
+              "onLongPressDown": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onLongPressDown",
+                      "PositionAuto"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ],
+              "onLongPressReleased": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onLongPressReleased",
+                      "PositionAuto"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ],
+              "onReleased": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onReleased",
+                      "PositionAuto"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ]
+            },
+            "name": "PositionAuto",
+            "style": {
+              "weight": "0.20"
+            },
+            "text": "Auto",
             "type": "button",
             "visible": true
           }
@@ -1503,6 +1503,66 @@
     "useUiView": true,
     "uiCallbacks": [
       {
+        "callback": "ModePowerOn",
+        "eventType": "onReleased",
+        "name": "ModePowerOn"
+      },
+      {
+        "callback": "",
+        "eventType": "onLongPressDown",
+        "name": "ModePowerOn"
+      },
+      {
+        "callback": "",
+        "eventType": "onLongPressReleased",
+        "name": "ModePowerOn"
+      },
+      {
+        "callback": "ModePowerOff",
+        "eventType": "onReleased",
+        "name": "ModePowerOff"
+      },
+      {
+        "callback": "",
+        "eventType": "onLongPressDown",
+        "name": "ModePowerOff"
+      },
+      {
+        "callback": "",
+        "eventType": "onLongPressReleased",
+        "name": "ModePowerOff"
+      },
+      {
+        "callback": "SetpointMinus",
+        "eventType": "onReleased",
+        "name": "SetpointMinu"
+      },
+      {
+        "callback": "",
+        "eventType": "onLongPressDown",
+        "name": "SetpointMinu"
+      },
+      {
+        "callback": "",
+        "eventType": "onLongPressReleased",
+        "name": "SetpointMinu"
+      },
+      {
+        "callback": "SetpointPlus",
+        "eventType": "onReleased",
+        "name": "SetpointPlus"
+      },
+      {
+        "callback": "",
+        "eventType": "onLongPressDown",
+        "name": "SetpointPlus"
+      },
+      {
+        "callback": "",
+        "eventType": "onLongPressReleased",
+        "name": "SetpointPlus"
+      },
+      {
         "callback": "Quiet",
         "eventType": "onReleased",
         "name": "Quiet"
@@ -1561,111 +1621,6 @@
         "callback": "",
         "eventType": "onLongPressReleased",
         "name": "VeryStrong"
-      },
-      {
-        "callback": "SetpointPlus",
-        "eventType": "onReleased",
-        "name": "SetpointPlus"
-      },
-      {
-        "callback": "",
-        "eventType": "onLongPressDown",
-        "name": "SetpointPlus"
-      },
-      {
-        "callback": "",
-        "eventType": "onLongPressReleased",
-        "name": "SetpointPlus"
-      },
-      {
-        "callback": "SetpointMinus",
-        "eventType": "onReleased",
-        "name": "SetpointMinus"
-      },
-      {
-        "callback": "",
-        "eventType": "onLongPressDown",
-        "name": "SetpointMinus"
-      },
-      {
-        "callback": "",
-        "eventType": "onLongPressReleased",
-        "name": "SetpointMinus"
-      },
-      {
-        "callback": "Position1",
-        "eventType": "onReleased",
-        "name": "Position1"
-      },
-      {
-        "callback": "",
-        "eventType": "onLongPressDown",
-        "name": "Position1"
-      },
-      {
-        "callback": "",
-        "eventType": "onLongPressReleased",
-        "name": "Position1"
-      },
-      {
-        "callback": "Position2",
-        "eventType": "onReleased",
-        "name": "Position2"
-      },
-      {
-        "callback": "",
-        "eventType": "onLongPressDown",
-        "name": "Position2"
-      },
-      {
-        "callback": "",
-        "eventType": "onLongPressReleased",
-        "name": "Position2"
-      },
-      {
-        "callback": "Position3",
-        "eventType": "onReleased",
-        "name": "Position3"
-      },
-      {
-        "callback": "",
-        "eventType": "onLongPressDown",
-        "name": "Position3"
-      },
-      {
-        "callback": "",
-        "eventType": "onLongPressReleased",
-        "name": "Position3"
-      },
-      {
-        "callback": "Position4",
-        "eventType": "onReleased",
-        "name": "Position4"
-      },
-      {
-        "callback": "",
-        "eventType": "onLongPressDown",
-        "name": "Position4"
-      },
-      {
-        "callback": "",
-        "eventType": "onLongPressReleased",
-        "name": "Position4"
-      },
-      {
-        "callback": "PositionAuto",
-        "eventType": "onReleased",
-        "name": "PositionAuto"
-      },
-      {
-        "callback": "",
-        "eventType": "onLongPressDown",
-        "name": "PositionAuto"
-      },
-      {
-        "callback": "",
-        "eventType": "onLongPressReleased",
-        "name": "PositionAuto"
       },
       {
         "callback": "ModeAuto",
@@ -1743,34 +1698,79 @@
         "name": "ModeCool"
       },
       {
-        "callback": "ModePowerOn",
+        "callback": "Position1",
         "eventType": "onReleased",
-        "name": "ModePowerOn"
+        "name": "Position1"
       },
       {
         "callback": "",
         "eventType": "onLongPressDown",
-        "name": "ModePowerOn"
+        "name": "Position1"
       },
       {
         "callback": "",
         "eventType": "onLongPressReleased",
-        "name": "ModePowerOn"
+        "name": "Position1"
       },
       {
-        "callback": "ModePowerOff",
+        "callback": "Position2",
         "eventType": "onReleased",
-        "name": "ModePowerOff"
+        "name": "Position2"
       },
       {
         "callback": "",
         "eventType": "onLongPressDown",
-        "name": "ModePowerOff"
+        "name": "Position2"
       },
       {
         "callback": "",
         "eventType": "onLongPressReleased",
-        "name": "ModePowerOff"
+        "name": "Position2"
+      },
+      {
+        "callback": "Position3",
+        "eventType": "onReleased",
+        "name": "Position3"
+      },
+      {
+        "callback": "",
+        "eventType": "onLongPressDown",
+        "name": "Position3"
+      },
+      {
+        "callback": "",
+        "eventType": "onLongPressReleased",
+        "name": "Position3"
+      },
+      {
+        "callback": "Position4",
+        "eventType": "onReleased",
+        "name": "Position4"
+      },
+      {
+        "callback": "",
+        "eventType": "onLongPressDown",
+        "name": "Position4"
+      },
+      {
+        "callback": "",
+        "eventType": "onLongPressReleased",
+        "name": "Position4"
+      },
+      {
+        "callback": "PositionAuto",
+        "eventType": "onReleased",
+        "name": "PositionAuto"
+      },
+      {
+        "callback": "",
+        "eventType": "onLongPressDown",
+        "name": "PositionAuto"
+      },
+      {
+        "callback": "",
+        "eventType": "onLongPressReleased",
+        "name": "PositionAuto"
       },
       {
         "callback": "Update",
@@ -1790,12 +1790,12 @@
     ],
     "quickAppVariables": [
       {
-        "name": "IPAddress",
+        "name": "device_ip",
         "type": "string",
-        "value": "192.168.1.12"
+        "value": "10.0.1.4"
       },
       {
-        "name": "TCPPort",
+        "name": "device_port",
         "type": "string",
         "value": "4001"
       },
@@ -1814,7 +1814,7 @@
       "name": "main",
       "isMain": true,
       "isOpen": true,
-      "content": "-- Modbus TCP QuickApp for HC3\n-- Created for Indome.ee / Kuuno\n\n-- SETTINGS --\nlocal ip = \"192.168.1.12\"\nlocal port = 4001\n\n-- Device init\nfunction QuickApp:onInit()\n  self:debug(\"✅ QuickApp initialized\")\n  self:updateView(\"lblRoomTemp\", \"text\", \"--\")\n  self:updateView(\"lblSetpointTemp\", \"text\", \"--\")\n  \n  -- Start periodic updates every 60 seconds\n  self:startUpdateTimer()\nend\n\nfunction QuickApp:startUpdateTimer()\n  local function loop()\n    self:Update()\n    setTimeout(loop, 60 * 1000)  -- 60 seconds\n  end\n\n  loop()  -- Start the first run\nend\n\n-- Quiet button ------------------\n\nfunction QuickApp:Quiet()\n  self:debug(\"🔕 'Quiet' button pressed\")\n\n  local sock = net.TCPSocket()\n  local ip = self.ip or \"192.168.1.12\"\n  local port = self.port or 4001\n\n  sock:connect(ip, port, {\n    success = function()\n      self:debug(\"✅ Connected to \" .. ip .. \":\" .. port)\n\n      local payload = string.char(0x01, 0x06, 0x00, 0x02, 0x00, 0x02)\n      local crc = self:getCRC(payload)\n      local packet = payload .. crc\n\n      self:debug(\"📤 Sending raw: \" .. tostring(packet))\n      self:debug(\"📤 Sending hex: \" .. self:hextostring(packet))\n\n      sock:write(packet)\n\n      sock:read({\n        success = function(data)\n          self:debug(\"📥 Received raw: \" .. tostring(data))\n          self:debug(\"📥 Received hex: \" .. self:hextostring(data))\n          sock:close()\n          fibaro.sleep(1500)\n          self:Update()\n        end,\n        error = function(message)\n          self:debug(\"⚠️ Read error: \" .. message)\n          sock:close()\n          \n        end\n      })\n    end,\n    error = function(message)\n      self:debug(\"❌ Connection error: \" .. message)\n      sock:close()\n    end\n  })\nend\n--Quiet button end ----------------\n\n\n-- Weak button ---------------------\n\nfunction QuickApp:Weak()\n  self:debug(\"💨 'Weak' button pressed\")\n\n  local sock = net.TCPSocket()\n  local ip = self.ip or \"192.168.1.12\"\n  local port = self.port or 4001\n\n  sock:connect(ip, port, {\n    success = function()\n      self:debug(\"✅ Connected to \" .. ip .. \":\" .. port)\n\n      -- Modbus function 6 (Write Single Register) to register 3, value 3\n      local payload = string.char(0x01, 0x06, 0x00, 0x02, 0x00, 0x03)\n      local crc = self:getCRC(payload)\n      local packet = payload .. crc\n\n      self:debug(\"📤 Sending raw: \" .. tostring(packet))\n      self:debug(\"📤 Sending hex: \" .. self:hextostring(packet))\n\n      sock:write(packet)\n\n      sock:read({\n        success = function(data)\n          self:debug(\"📥 Received raw: \" .. tostring(data))\n          self:debug(\"📥 Received hex: \" .. self:hextostring(data))\n          sock:close()\n          fibaro.sleep(1500)\n          self:Update()\n        end,\n        error = function(message)\n          self:debug(\"⚠️ Read error: \" .. message)\n          sock:close()\n          \n        end\n      })\n    end,\n    error = function(message)\n      self:debug(\"❌ Connection error: \" .. message)\n      sock:close()\n    end\n  })\nend\n\n-- Weak button end ------------------\n\n\n--Strong -----------------------------\n\nfunction QuickApp:Strong()\n  self:debug(\"💨 'Strong' button pressed\")\n\n  local sock = net.TCPSocket()\n  local ip = self.ip or \"192.168.1.12\"\n  local port = self.port or 4001\n\n  sock:connect(ip, port, {\n    success = function()\n      self:debug(\"✅ Connected to \" .. ip .. \":\" .. port)\n\n      local payload = string.char(0x01, 0x06, 0x00, 0x02, 0x00, 0x05) -- Strong = value 5\n      local crc = self:getCRC(payload)\n      local packet = payload .. crc\n\n      self:debug(\"📤 Sending raw: \" .. tostring(packet))\n      self:debug(\"📤 Sending hex: \" .. self:hextostring(packet))\n\n      sock:write(packet)\n\n      sock:read({\n        success = function(data)\n          self:debug(\"📥 Received raw: \" .. tostring(data))\n          self:debug(\"📥 Received hex: \" .. self:hextostring(data))\n          sock:close()\n          fibaro.sleep(1500)\n          self:Update()\n        end,\n        error = function(message)\n          self:debug(\"⚠️ Read error: \" .. message)\n          sock:close()\n        end\n      })\n    end,\n    error = function(message)\n      self:debug(\"❌ Connection error: \" .. message)\n      sock:close()\n    end\n  })\nend\n--Strong button end -----------------\n\n-- Very strong ---------------\nfunction QuickApp:VeryStrong()\n  self:debug(\"💨 'Very Strong' button pressed\")\n\n  local sock = net.TCPSocket()\n  local ip = self.ip or \"192.168.1.12\"\n  local port = self.port or 4001\n\n  sock:connect(ip, port, {\n    success = function()\n      self:debug(\"✅ Connected to \" .. ip .. \":\" .. port)\n\n      -- Build Modbus payload\n      local payload = string.char(0x01, 0x06, 0x00, 0x02, 0x00, 0x06) -- Write 6 to register 3\n      local crc = self:getCRC(payload)\n      local packet = payload .. crc\n\n      self:debug(\"📤 Sending raw: \" .. tostring(packet))\n      self:debug(\"📤 Sending hex: \" .. self:hextostring(packet))\n\n      sock:write(packet)\n\n      sock:read({\n        success = function(data)\n          self:debug(\"📥 Received raw: \" .. tostring(data))\n          self:debug(\"📥 Received hex: \" .. self:hextostring(data))\n          sock:close()\n          fibaro.sleep(1500)\n          self:Update()\n        end,\n        error = function(message)\n          self:debug(\"⚠️ Read error: \" .. message)\n          sock:close()\n        end\n      })\n    end,\n    error = function(message)\n      self:debug(\"❌ Connection error: \" .. message)\n      sock:close()\n    end\n  })\nend\n-- Very strong end ---------------------\n\n-- Setpoint + -----\n\nfunction QuickApp:SetpointPlus()\n  self:debug(\"➕ 'Setpoint+' button pressed\")\n\n  local current = self.currentSetpoint or 19.0\n  local newValue = math.floor((current * 10) + 5)\n\n  local sock = net.TCPSocket()\n  local ip = self.ip or \"192.168.1.12\"\n  local port = self.port or 4001\n\n  sock:connect(ip, port, {\n    success = function()\n      self:debug(\"✅ Connected to \" .. ip .. \":\" .. port)\n\n      local payload = string.char(0x01, 0x06, 0x00, 0x01, math.floor(newValue / 256), newValue % 256)\n      local crc = self:getCRC(payload)\n      local packet = payload .. crc\n\n      self:debug(\"📤 Sending raw: \" .. tostring(packet))\n      self:debug(\"📤 Sending hex: \" .. self:hextostring(packet))\n\n      sock:write(packet)\n\n      sock:read({\n        success = function(data)\n          self:debug(\"📥 Received raw: \" .. tostring(data))\n          self:debug(\"📥 Received hex: \" .. self:hextostring(data))\n          sock:close()\n          fibaro.sleep(1500)\n          self:Update()\n        end,\n        error = function(message)\n          self:debug(\"⚠️ Read error: \" .. message)\n          sock:close()\n        end\n      })\n    end,\n    error = function(message)\n      self:debug(\"❌ Connection error: \" .. message)\n      sock:close()\n    end\n  })\nend\n-- Setpoint + end --------\n\n-- Setpoint - -----\n\nfunction QuickApp:SetpointMinus()\n  self:debug(\"➖ 'Setpoint-' button pressed\")\n\n  local current = self.currentSetpoint or 19.0\n  local newValue = math.floor((current * 10) - 5)\n\n  local sock = net.TCPSocket()\n  local ip = self.ip or \"192.168.1.12\"\n  local port = self.port or 4001\n\n  sock:connect(ip, port, {\n    success = function()\n      self:debug(\"✅ Connected to \" .. ip .. \":\" .. port)\n\n      local payload = string.char(0x01, 0x06, 0x00, 0x01, math.floor(newValue / 256), newValue % 256)\n      local crc = self:getCRC(payload)\n      local packet = payload .. crc\n\n      self:debug(\"📤 Sending raw: \" .. tostring(packet))\n      self:debug(\"📤 Sending hex: \" .. self:hextostring(packet))\n\n      sock:write(packet)\n\n      sock:read({\n        success = function(data)\n          self:debug(\"📥 Received raw: \" .. tostring(data))\n          self:debug(\"📥 Received hex: \" .. self:hextostring(data))\n          sock:close()\n          fibaro.sleep(1500)\n          self:Update()\n        end,\n        error = function(message)\n          self:debug(\"⚠️ Read error: \" .. message)\n          sock:close()\n        end\n      })\n    end,\n    error = function(message)\n      self:debug(\"❌ Connection error: \" .. message)\n      sock:close()\n    end\n  })\nend\n\n-- Setpoint - end --------\n\n-- Position1 -----\n\nfunction QuickApp:Position1()\n  self:debug(\"🔁 'Position 1' button pressed\")\n\n  local sock = net.TCPSocket()\n  local ip = self.ip or \"192.168.1.12\"\n  local port = self.port or 4001\n\n  sock:connect(ip, port, {\n    success = function()\n      self:debug(\"✅ Connected to \" .. ip .. \":\" .. port)\n\n      local payload = string.char(0x01, 0x06, 0x00, 0x03, 0x00, 0x01) -- func=6, start=4, value=1\n      local crc = self:getCRC(payload)\n      local packet = payload .. crc\n\n      self:debug(\"📤 Sending raw: \" .. tostring(packet))\n      self:debug(\"📤 Sending hex: \" .. self:hextostring(packet))\n\n      sock:write(packet)\n\n      sock:read({\n        success = function(data)\n          self:debug(\"📥 Received raw: \" .. tostring(data))\n          self:debug(\"📥 Received hex: \" .. self:hextostring(data))\n          sock:close()\n          fibaro.sleep(1500)\n          self:Update()\n        end,\n        error = function(message)\n          self:debug(\"⚠️ Read error: \" .. message)\n          sock:close()\n        end\n      })\n    end,\n    error = function(message)\n      self:debug(\"❌ Connection error: \" .. message)\n      sock:close()\n    end\n  })\nend\n\n--Position 1 end ---\n\n-- Position2 -----\n\nfunction QuickApp:Position2()\n  self:debug(\"🔁 'Position 2' button pressed\")\n\n  local sock = net.TCPSocket()\n  local ip = self.ip or \"192.168.1.12\"\n  local port = self.port or 4001\n\n  sock:connect(ip, port, {\n    success = function()\n      self:debug(\"✅ Connected to \" .. ip .. \":\" .. port)\n\n      local payload = string.char(0x01, 0x06, 0x00, 0x03, 0x00, 0x02) -- func=6, start=4, value=2\n      local crc = self:getCRC(payload)\n      local packet = payload .. crc\n\n      self:debug(\"📤 Sending raw: \" .. tostring(packet))\n      self:debug(\"📤 Sending hex: \" .. self:hextostring(packet))\n\n      sock:write(packet)\n\n      sock:read({\n        success = function(data)\n          self:debug(\"📥 Received raw: \" .. tostring(data))\n          self:debug(\"📥 Received hex: \" .. self:hextostring(data))\n          sock:close()\n          fibaro.sleep(1500)\n          self:Update()\n        end,\n        error = function(message)\n          self:debug(\"⚠️ Read error: \" .. message)\n          sock:close()\n        end\n      })\n    end,\n    error = function(message)\n      self:debug(\"❌ Connection error: \" .. message)\n      sock:close()\n    end\n  })\nend\n\n--Position 2 end ---\n\n-- Position3 -----\n\nfunction QuickApp:Position3()\n  self:debug(\"🔁 'Position 3' button pressed\")\n\n  local sock = net.TCPSocket()\n  local ip = self.ip or \"192.168.1.12\"\n  local port = self.port or 4001\n\n  sock:connect(ip, port, {\n    success = function()\n      self:debug(\"✅ Connected to \" .. ip .. \":\" .. port)\n\n      local payload = string.char(0x01, 0x06, 0x00, 0x03, 0x00, 0x03) -- func=6, start=4, value=3\n      local crc = self:getCRC(payload)\n      local packet = payload .. crc\n\n      self:debug(\"📤 Sending raw: \" .. tostring(packet))\n      self:debug(\"📤 Sending hex: \" .. self:hextostring(packet))\n\n      sock:write(packet)\n\n      sock:read({\n        success = function(data)\n          self:debug(\"📥 Received raw: \" .. tostring(data))\n          self:debug(\"📥 Received hex: \" .. self:hextostring(data))\n          sock:close()\n          fibaro.sleep(1500)\n          self:Update()\n        end,\n        error = function(message)\n          self:debug(\"⚠️ Read error: \" .. message)\n          sock:close()\n        end\n      })\n    end,\n    error = function(message)\n      self:debug(\"❌ Connection error: \" .. message)\n      sock:close()\n    end\n  })\nend\n\n--Position 3 end ---\n\n-- Position4 -----\n\nfunction QuickApp:Position4()\n  self:debug(\"🔁 'Position 4' button pressed\")\n\n  local sock = net.TCPSocket()\n  local ip = self.ip or \"192.168.1.12\"\n  local port = self.port or 4001\n\n  sock:connect(ip, port, {\n    success = function()\n      self:debug(\"✅ Connected to \" .. ip .. \":\" .. port)\n\n      local payload = string.char(0x01, 0x06, 0x00, 0x03, 0x00, 0x04) -- func=6, start=4, value=4\n      local crc = self:getCRC(payload)\n      local packet = payload .. crc\n\n      self:debug(\"📤 Sending raw: \" .. tostring(packet))\n      self:debug(\"📤 Sending hex: \" .. self:hextostring(packet))\n\n      sock:write(packet)\n\n      sock:read({\n        success = function(data)\n          self:debug(\"📥 Received raw: \" .. tostring(data))\n          self:debug(\"📥 Received hex: \" .. self:hextostring(data))\n          sock:close()\n          fibaro.sleep(1500)\n          self:Update()\n        end,\n        error = function(message)\n          self:debug(\"⚠️ Read error: \" .. message)\n          sock:close()\n        end\n      })\n    end,\n    error = function(message)\n      self:debug(\"❌ Connection error: \" .. message)\n      sock:close()\n    end\n  })\nend\n\n--Position 4 end ---\n\n-- Position Auto -----\n\nfunction QuickApp:PositionAuto()\n  self:debug(\"🔁 'Position Auto' button pressed\")\n\n  local sock = net.TCPSocket()\n  local ip = self.ip or \"192.168.1.12\"\n  local port = self.port or 4001\n\n  sock:connect(ip, port, {\n    success = function()\n      self:debug(\"✅ Connected to \" .. ip .. \":\" .. port)\n      local payload = string.char(0x01, 0x06, 0x00, 0x03, 0x00, 0x07) -- func=6, start=4, value=7\n      local crc = self:getCRC(payload)\n      local packet = payload .. crc\n\n      self:debug(\"📤 Sending raw: \" .. tostring(packet))\n      self:debug(\"📤 Sending hex: \" .. self:hextostring(packet))\n\n      sock:write(packet)\n\n      sock:read({\n        success = function(data)\n          self:debug(\"📥 Received raw: \" .. tostring(data))\n          self:debug(\"📥 Received hex: \" .. self:hextostring(data))\n          sock:close()\n          fibaro.sleep(1500)\n          self:Update()\n        end,\n        error = function(message)\n          self:debug(\"⚠️ Read error: \" .. message)\n          sock:close()\n        end\n      })\n    end,\n    error = function(message)\n      self:debug(\"❌ Connection error: \" .. message)\n      sock:close()\n    end\n  })\nend\n\n--Position Auto end ---\n\n-- Mode Auto ---------------\nfunction QuickApp:ModeAuto()\n  self:debug(\"🅰️ 'Auto' button pressed\")\n\n  local sock = net.TCPSocket()\n  local ip = self.ip or \"192.168.1.12\"\n  local port = self.port or 4001\n\n  sock:connect(ip, port, {\n    success = function()\n      self:debug(\"✅ Connected to \" .. ip .. \":\" .. port)\n\n      local payload = string.char(0x01, 0x06, 0x00, 0x00, 0x00, 0x08)\n      local crc = self:getCRC(payload)\n      local packet = payload .. crc\n\n      self:debug(\"📤 Sending raw: \" .. tostring(packet))\n      self:debug(\"📤 Sending hex: \" .. self:hextostring(packet))\n\n      sock:write(packet)\n\n      sock:read({\n        success = function(data)\n          self:debug(\"📥 Received raw: \" .. tostring(data))\n          self:debug(\"📥 Received hex: \" .. self:hextostring(data))\n          sock:close()\n          fibaro.sleep(1500)\n          self:Update()\n        end,\n        error = function(message)\n          self:debug(\"⚠️ Read error: \" .. message)\n          sock:close()\n        end\n      })\n    end,\n    error = function(message)\n      self:debug(\"❌ Connection error: \" .. message)\n      sock:close()\n    end\n  })\nend\n--Mode Auto end ---------------\n\n--Mode Heat -----------\nfunction QuickApp:ModeHeat()\n  self:debug(\"🔥 'ModeHeat' button pressed\")\n\n  local sock = net.TCPSocket()\n  local ip = self.ip or \"192.168.1.12\"\n  local port = self.port or 4001\n\n  sock:connect(ip, port, {\n    success = function()\n      self:debug(\"✅ Connected to \" .. ip .. \":\" .. port)\n\n      local payload = string.char(0x01, 0x06, 0x00, 0x00, 0x00, 0x01)\n      local crc = self:getCRC(payload)\n      local packet = payload .. crc\n\n      self:debug(\"📤 Sending raw: \" .. tostring(packet))\n      self:debug(\"📤 Sending hex: \" .. self:hextostring(packet))\n\n      sock:write(packet)\n\n      sock:read({\n        success = function(data)\n          self:debug(\"📥 Received raw: \" .. tostring(data))\n          self:debug(\"📥 Received hex: \" .. self:hextostring(data))\n          sock:close()\n          fibaro.sleep(1500)\n          self:Update()\n        end,\n        error = function(message)\n          self:debug(\"⚠️ Read error: \" .. message)\n          sock:close()\n        end\n      })\n    end,\n    error = function(message)\n      self:debug(\"❌ Connection error: \" .. message)\n      sock:close()\n    end\n  })\nend\n-- Mode Heat ------\n\n--Mode Dry\nfunction QuickApp:ModeDry()\n  self:debug(\"💧 'ModeDry' button pressed\")\n\n  local sock = net.TCPSocket()\n  local ip = self.ip or \"192.168.1.12\"\n  local port = self.port or 4001\n\n  sock:connect(ip, port, {\n    success = function()\n      self:debug(\"✅ Connected to \" .. ip .. \":\" .. port)\n\n      local payload = string.char(0x01, 0x06, 0x00, 0x00, 0x00, 0x02)\n      local crc = self:getCRC(payload)\n      local packet = payload .. crc\n\n      self:debug(\"📤 Sending raw: \" .. tostring(packet))\n      self:debug(\"📤 Sending hex: \" .. self:hextostring(packet))\n\n      sock:write(packet)\n\n      sock:read({\n        success = function(data)\n          self:debug(\"📥 Received raw: \" .. tostring(data))\n          self:debug(\"📥 Received hex: \" .. self:hextostring(data))\n          sock:close()\n          fibaro.sleep(1500)\n          self:Update()\n        end,\n        error = function(message)\n          self:debug(\"⚠️ Read error: \" .. message)\n          sock:close()\n        end\n      })\n    end,\n    error = function(message)\n      self:debug(\"❌ Connection error: \" .. message)\n      sock:close()\n    end\n  })\nend\n--Mode Dry end\n\n--ModeFan\nfunction QuickApp:ModeFan()\n  self:debug(\"🌀 'ModeFan' button pressed\")\n\n  local sock = net.TCPSocket()\n  local ip = self.ip or \"192.168.1.12\"\n  local port = self.port or 4001\n\n  sock:connect(ip, port, {\n    success = function()\n      self:debug(\"✅ Connected to \" .. ip .. \":\" .. port)\n\n      local payload = string.char(0x01, 0x06, 0x00, 0x00, 0x00, 0x07) -- Write 7 to register 1\n      local crc = self:getCRC(payload)\n      local packet = payload .. crc\n\n      self:debug(\"📤 Sending raw: \" .. tostring(packet))\n      self:debug(\"📤 Sending hex: \" .. self:hextostring(packet))\n\n      sock:write(packet)\n\n      sock:read({\n        success = function(data)\n          self:debug(\"📥 Received raw: \" .. tostring(data))\n          self:debug(\"📥 Received hex: \" .. self:hextostring(data))\n          sock:close()\n          fibaro.sleep(1500)\n          self:Update()\n        end,\n        error = function(message)\n          self:debug(\"⚠️ Read error: \" .. message)\n          sock:close()\n        end\n      })\n    end,\n    error = function(message)\n      self:debug(\"❌ Connection error: \" .. message)\n      sock:close()\n    end\n  })\nend\n--ModeFan end\n\n--Mode Cool\nfunction QuickApp:ModeCool()\n  self:debug(\"❄️ 'ModeCool' button pressed\")\n\n  local sock = net.TCPSocket()\n  local ip = self.ip or \"192.168.1.12\"\n  local port = self.port or 4001\n\n  sock:connect(ip, port, {\n    success = function()\n      self:debug(\"✅ Connected to \" .. ip .. \":\" .. port)\n\n      local payload = string.char(0x01, 0x06, 0x00, 0x00, 0x00, 0x03) -- Write 3 to register 1\n      local crc = self:getCRC(payload)\n      local packet = payload .. crc\n\n      self:debug(\"📤 Sending raw: \" .. tostring(packet))\n      self:debug(\"📤 Sending hex: \" .. self:hextostring(packet))\n\n      sock:write(packet)\n\n      sock:read({\n        success = function(data)\n          self:debug(\"📥 Received raw: \" .. tostring(data))\n          self:debug(\"📥 Received hex: \" .. self:hextostring(data))\n          sock:close()\n          fibaro.sleep(1500)\n          self:Update()\n        end,\n        error = function(message)\n          self:debug(\"⚠️ Read error: \" .. message)\n          sock:close()\n        end\n      })\n    end,\n    error = function(message)\n      self:debug(\"❌ Connection error: \" .. message)\n      sock:close()\n    end\n  })\nend\n-- Mode Cool end\n\n--Mode Power ON\nfunction QuickApp:ModePowerOn()\n  self:debug(\"🔌 'ModePowerOn' button pressed\")\n\n  local sock = net.TCPSocket()\n  local ip = self.ip or \"192.168.1.12\"\n  local port = self.port or 4001\n\n  sock:connect(ip, port, {\n    success = function()\n      self:debug(\"✅ Connected to \" .. ip .. \":\" .. port)\n\n      local payload = string.char(0x01, 0x06, 0x00, 0x07, 0x00, 0x01) -- Write 1 to register 8\n      local crc = self:getCRC(payload)\n      local packet = payload .. crc\n\n      self:debug(\"📤 Sending raw: \" .. tostring(packet))\n      self:debug(\"📤 Sending hex: \" .. self:hextostring(packet))\n\n      sock:write(packet)\n\n      sock:read({\n        success = function(data)\n          self:debug(\"📥 Received raw: \" .. tostring(data))\n          self:debug(\"📥 Received hex: \" .. self:hextostring(data))\n          sock:close()\n          fibaro.sleep(1500)\n          self:Update()\n        end,\n        error = function(message)\n          self:debug(\"⚠️ Read error: \" .. message)\n          sock:close()\n        end\n      })\n    end,\n    error = function(message)\n      self:debug(\"❌ Connection error: \" .. message)\n      sock:close()\n    end\n  })\nend\n-- Mode Powwr On end\n\n--Mode Power Off\n\nfunction QuickApp:ModePowerOff()\n  self:debug(\"⛔ 'ModePowerOff' button pressed\")\n\n  local sock = net.TCPSocket()\n  local ip = self.ip or \"192.168.1.12\"\n  local port = self.port or 4001\n\n  sock:connect(ip, port, {\n    success = function()\n      self:debug(\"✅ Connected to \" .. ip .. \":\" .. port)\n\n      local payload = string.char(0x01, 0x06, 0x00, 0x07, 0x00, 0x00) -- Write 0 to register 8\n      local crc = self:getCRC(payload)\n      local packet = payload .. crc\n\n      self:debug(\"📤 Sending raw: \" .. tostring(packet))\n      self:debug(\"📤 Sending hex: \" .. self:hextostring(packet))\n\n      sock:write(packet)\n\n      sock:read({\n        success = function(data)\n          self:debug(\"📥 Received raw: \" .. tostring(data))\n          self:debug(\"📥 Received hex: \" .. self:hextostring(data))\n          sock:close()\n          fibaro.sleep(1500)\n          self:Update()\n        end,\n        error = function(message)\n          self:debug(\"⚠️ Read error: \" .. message)\n          sock:close()\n        end\n      })\n    end,\n    error = function(message)\n      self:debug(\"❌ Connection error: \" .. message)\n      sock:close()\n    end\n  })\nend\n--Mode Power Off end\n\n\n\n\n\n-- Converts string to hex representation\nfunction QuickApp:hextostring(str, spacer)\n  return (\n    string.gsub(str, \"(.)\",\n      function (c)\n        return string.format(\"%02X%s\", string.byte(c), spacer or \" \")\n      end)\n  )\nend\n\n-- CRC16 calculator (Modbus RTU)\nfunction QuickApp:getCRC(data)\n  local crc = 0xFFFF\n  for i = 1, #data do\n    crc = bit32.bxor(crc, data:byte(i))\n    for _ = 1, 8 do\n      if crc % 2 == 1 then\n        crc = bit32.rshift(crc, 1)\n        crc = bit32.bxor(crc, 0xA001)\n      else\n        crc = bit32.rshift(crc, 1)\n      end\n    end\n  end\n  return string.char(crc % 256, math.floor(crc / 256))\nend\n\n-- Decode Modbus response for 1 register (2 bytes)\nfunction QuickApp:parseValue(data)\n  local len = string.len(data)\n  if len >= 7 then\n    local byte1 = string.byte(data, 4)\n    local byte2 = string.byte(data, 5)\n    return byte1 * 256 + byte2  -- ✅ This is a number\n  else\n    return nil\n  end\nend\n\n-- Build Modbus request payload\nfunction QuickApp:buildPayload(func, start, len)\n  local payload = string.char(0x01, func)\n      .. string.char(math.floor(start / 256), start % 256)\n      .. string.char(math.floor(len / 256), len % 256)\n  local crc = self:getCRC(payload)\n  return payload .. crc\nend\n\n-- Update button\nfunction QuickApp:Update()\n  self:debug(\"🔁 'Update' button pressed\")\n\n  local sock = net.TCPSocket()\n\n  local commands = {\n    {label = \"lblSetpointTemp\", func = 3, start = 1, len = 1},\n    {label = \"lblRoomTemp\", func = 4, start = 0, len = 1},\n    {label = \"lblPowerList\", func = 3, start = 7, len = 1, list = {[1] = \"ON\", [0] = \"OFF\"}},\n    {label = \"lblVaneList\", func = 3, start = 3, len = 1, list = {\n      [0] = \"Auto\", [1] = \"Pos 1\", [2] = \"Pos 2\",\n      [3] = \"Pos 3\", [4] = \"Pos 4\", [5] = \"Pos 5\", [7] = \"Swing\"\n    }},\n    {label = \"lblSpeedList\", func = 3, start = 2, len = 1, list = {\n      [0] = \"Auto\", [2] = \"Quiet\", [3] = \"Weak\",\n      [5] = \"Strong\", [6] = \"V. Strong\"\n    }},\n    {label = \"lblModeList\", func = 3, start = 0, len = 1, list = {\n      [1] = \"Heat\", [2] = \"De-Hum\", [3] = \"Cool\",\n      [7] = \"Vent\", [8] = \"Auto\"\n    }}\n  }\n\n  local function buildPayload(func, start, len)\n    local payload = string.char(0x01, func)\n        .. string.char(math.floor(start / 256), start % 256)\n        .. string.char(math.floor(len / 256), len % 256)\n    local crc = self:getCRC(payload)\n    return payload .. crc\n  end\n\n  local function parseValue(data, list)\n    if #data >= 5 then\n      local byte1 = data:byte(4)\n      local byte2 = data:byte(5)\n      local value = byte1 * 256 + byte2\n      if list then\n        return list[value] or (\"?\" .. tostring(value))\n      else\n        return value\n      end\n    else\n      return \"ERR\"\n    end\n  end\n\n  local function processNextCommand(index)\n    if index > #commands then\n      sock:close()\n      self:debug(\"✅ All commands processed.\")\n      return\n    end\n\n    local cmd = commands[index]\n    local payload = buildPayload(cmd.func, cmd.start, cmd.len)\n\n    self:debug(\"📤 Sending raw to \" .. cmd.label .. \": \" .. tostring(payload))\n    self:debug(\"📤 Sending hex to \" .. cmd.label .. \": \" .. self:hextostring(payload))\n\n    sock:write(payload)\n\n    sock:read({\n      success = function(data)\n  self:debug(\"📥 Received raw from \" .. cmd.label .. \": \" .. tostring(data))\n  self:debug(\"📥 Received hex from \" .. cmd.label .. \": \" .. self:hextostring(data))\n\n  local byte3, byte4 = data:byte(4), data:byte(5)\n  if byte3 and byte4 then\n    local rawValue = byte3 * 256 + byte4\n    local displayValue\n\n    if cmd.label == \"lblSetpointTemp\" or cmd.label == \"lblRoomTemp\" then\n      displayValue = string.format(\"%.1f °C\", rawValue / 10)\n\n      if cmd.label == \"lblSetpointTemp\" then\n        self.currentSetpoint = rawValue / 10\n        self:debug(\"📡 Stored current setpoint: \" .. tostring(self.currentSetpoint))\n      end\n\n    elseif cmd.list then\n      displayValue = cmd.list[rawValue] or (\"?\" .. tostring(rawValue))\n    else\n      displayValue = tostring(rawValue)\n    end\n\n    self:debug(\"📊 \" .. cmd.label .. \" = \" .. displayValue)\n    self:updateView(cmd.label, \"text\", displayValue)\n  else\n    self:debug(\"⚠️ Incomplete data received from \" .. cmd.label)\n    self:updateView(cmd.label, \"text\", \"ERR\")\n  end\n\n  processNextCommand(index + 1)\nend\n    })\n  end\n\n  sock:connect(ip, port, {\n    success = function()\n      self:debug(\"✅ Connected to \" .. ip .. \":\" .. port)\n      processNextCommand(1)\n    end,\n    error = function(message)\n      self:debug(\"❌ Connection error: \" .. message)\n    end\n  })\nend\n"
+      "content": "-- Modbus TCP QuickApp for HC3\n-- Created for Indome.ee / Kuuno\n-- Polished and refactored for readability and maintainability\n\n-- SETTINGS --\nlocal ip   -- = \"10.0.1.4\"\nlocal port -- = \"4001\"\n\n-- Device init\nfunction QuickApp:onInit()\n   __TAG = \"QA_MODBUS_AC_\" .. plugin.mainDeviceId\n\n\tself:trace(\"✅ QuickApp initialized\")\n\tself:updateView(\"lblRoomTemp\", \"text\", \"--\")\n\tself:updateView(\"lblSetpointTemp\", \"text\", \"--\")\n\n\tip   = self:getVariable(\"device_ip\")\n\tport = self:getVariable(\"device_port\")\n\n\tif not ip or ip == \"\" then\n\t\tself:error(\"❌ Device IP is not set\")\n\t\tip =  \"10.0.1.4\"\n\tend\n\n\tif not port or port == \"\" then\n\t\tself:error(\"❌ Device Port is not set\")\n\t\tport =  \"4001\"\n\tend\n\tself:trace(\"✅ Device IP: \" .. ip .. \" port: \" .. port)\n\n\n\t-- Start periodic updates every 60 seconds\n\tself:startUpdateTimer()\nend\n\nfunction QuickApp:startUpdateTimer()\n\tlocal function loop()\n\t\tself:Update()\n\t\tsetTimeout(loop, 60 * 1000) -- 60s\n\tend\n\tloop()\nend\n\n--------------------------------------------------------\n-- 🔧 COMMON UTILITIES\n--------------------------------------------------------\n\n-- Converts string to hex representation\nfunction QuickApp:hextostring(str, spacer)\n\treturn (string.gsub(str, \"(.)\",\n\t\tfunction(c) return string.format(\"%02X%s\", string.byte(c), spacer or \" \") end))\nend\n\n-- CRC16 calculator (Modbus RTU)\nfunction QuickApp:getCRC(data)\n\tlocal crc = 0xFFFF\n\tfor i = 1, #data do\n\t\tcrc = bit32.bxor(crc, data:byte(i))\n\t\tfor _ = 1, 8 do\n\t\t\tif crc % 2 == 1 then\n\t\t\t\tcrc = bit32.rshift(crc, 1)\n\t\t\t\tcrc = bit32.bxor(crc, 0xA001)\n\t\t\telse\n\t\t\t\tcrc = bit32.rshift(crc, 1)\n\t\t\tend\n\t\tend\n\tend\n\treturn string.char(crc % 256, math.floor(crc / 256))\nend\n\n-- Build Modbus request payload\nfunction QuickApp:buildPayload(func, reg, value)\n\tlocal payload = string.char(0x01, func)\n\t\t.. string.char(math.floor(reg / 256), reg % 256)\n\t\t.. string.char(math.floor(value / 256), value % 256)\n\treturn payload .. self:getCRC(payload)\nend\n\n-- Generic Modbus command sender\nfunction QuickApp:sendModbusCommand(label, func, reg, value, callback)\n\tlocal sock = net.TCPSocket()\n\tlocal payload = self:buildPayload(func, reg, value)\n\n\tsock:connect(ip, tonumber(port), {\n\t\tsuccess = function()\n\t\t\tself:debug(\"📡 Sending \" .. label .. \": \" .. self:hextostring(payload))\n\t\t\tsock:write(payload)\n\n\t\t\tsock:read({\n\t\t\t\tsuccess = function(data)\n\t\t\t\t\tself:debug(\"📥 Received (\" .. label .. \"): \" .. self:hextostring(data))\n\t\t\t\t\tsock:close()\n\t\t\t\t\tfibaro.sleep(1500)\n\t\t\t\t\tif callback then callback(data) end\n\t\t\t\t\tself:Update()\n\t\t\t\tend,\n\t\t\t\terror = function(message)\n\t\t\t\t\tself:error(\"❌ Read error: \" .. message)\n\t\t\t\t\tsock:close()\n\t\t\t\tend\n\t\t\t})\n\t\tend,\n\t\terror = function(message)\n\t\t\tself:error(\"❌ Connection error: \" .. message)\n\t\t\tsock:close()\n\t\tend\n\t})\nend\n\n--------------------------------------------------------\n-- 🔘 BUTTON HANDLERS\n--------------------------------------------------------\n\n-- Fan speeds\nfunction QuickApp:Quiet()       self:sendModbusCommand(\"Quiet\",       0x06, 0x0002, 0x0002) end\nfunction QuickApp:Weak()        self:sendModbusCommand(\"Weak\",        0x06, 0x0002, 0x0003) end\nfunction QuickApp:Strong()      self:sendModbusCommand(\"Strong\",      0x06, 0x0002, 0x0005) end\nfunction QuickApp:VeryStrong()  self:sendModbusCommand(\"VeryStrong\",  0x06, 0x0002, 0x0006) end\n\n-- Setpoints\nfunction QuickApp:SetpointPlus()\n\tlocal current = self.currentSetpoint or 19.0\n\tlocal newValue = math.floor((current * 10) + 5)\n\tself:sendModbusCommand(\"Setpoint+\", 0x06, 0x0001, newValue)\nend\n\nfunction QuickApp:SetpointMinus()\n\tlocal current = self.currentSetpoint or 19.0\n\tlocal newValue = math.floor((current * 10) - 5)\n\tself:sendModbusCommand(\"Setpoint-\", 0x06, 0x0001, newValue)\nend\n\n-- Vane positions\nfunction QuickApp:Position1()    self:sendModbusCommand(\"Position1\",   0x06, 0x0003, 0x0001) end\nfunction QuickApp:Position2()    self:sendModbusCommand(\"Position2\",   0x06, 0x0003, 0x0002) end\nfunction QuickApp:Position3()    self:sendModbusCommand(\"Position3\",   0x06, 0x0003, 0x0003) end\nfunction QuickApp:Position4()    self:sendModbusCommand(\"Position4\",   0x06, 0x0003, 0x0004) end\nfunction QuickApp:PositionAuto() self:sendModbusCommand(\"PositionAuto\",0x06, 0x0003, 0x0007) end\n\n-- Modes\nfunction QuickApp:ModeAuto()     self:sendModbusCommand(\"ModeAuto\",    0x06, 0x0000, 0x0008) end\nfunction QuickApp:ModeHeat()     self:sendModbusCommand(\"ModeHeat\",    0x06, 0x0000, 0x0001) end\nfunction QuickApp:ModeDry()      self:sendModbusCommand(\"ModeDry\",     0x06, 0x0000, 0x0002) end\nfunction QuickApp:ModeFan()      self:sendModbusCommand(\"ModeFan\",     0x06, 0x0000, 0x0007) end\nfunction QuickApp:ModeCool()     self:sendModbusCommand(\"ModeCool\",    0x06, 0x0000, 0x0003) end\n\n-- Power\nfunction QuickApp:ModePowerOn()  self:sendModbusCommand(\"PowerOn\",     0x06, 0x0007, 0x0001) end\nfunction QuickApp:ModePowerOff() self:sendModbusCommand(\"PowerOff\",    0x06, 0x0007, 0x0000) end\n\n--------------------------------------------------------\n-- 🔄 UPDATE LOOP\n--------------------------------------------------------\n\nfunction QuickApp:Update()\n\tif self.isUpdating then\n\t\tself:debug(\"⏳ Update already in progress, marking pending.\")\n\t\tself.pendingUpdateRequested = true\n\t\treturn\n\tend\n\n\tself.isUpdating = true\n\tself.pendingUpdateRequested = false\n\tself:debug(\"🔄 Update triggered\")\n\n\tlocal sock = net.TCPSocket()\n\n\tlocal function finish()\n\t\tif sock then\n\t\t\tpcall(function() sock:close() end)\n\t\t\tsock = nil\n\t\tend\n\n\t\tlocal shouldRestart = self.pendingUpdateRequested\n\t\tself.isUpdating = false\n\t\tself.pendingUpdateRequested = false\n\n\t\tif shouldRestart then\n\t\t\tself:debug(\"🔁 Running pending update.\")\n\t\t\tself:Update()\n\t\tend\n\tend\n\n\tlocal commands = {\n\t\t{label=\"lblSetpointTemp\", func=3, start=1, len=1},\n\t\t{label=\"lblRoomTemp\",     func=4, start=0, len=1},\n\t\t{label=\"lblPowerList\",    func=3, start=7, len=1, list={[1]=\"⚡ ON\",[0]=\"⭕ OFF\"}},\n\t\t{label=\"lblVaneList\",     func=3, start=3, len=1, list={[0]=\"🔄 Auto\",[1]=\"📍 Pos1\",[2]=\"📍 Pos2\",[3]=\"📍 Pos3\",[4]=\"📍 Pos4\",[5]=\"📍 Pos5\",[7]=\"↔️ Swing\"}},\n\t\t{label=\"lblSpeedList\",    func=3, start=2, len=1, list={[0]=\"🔄 Auto\",[2]=\"🤫 Quiet\",[3]=\"💨 Weak\",[5]=\"💨💨 Strong\",[6]=\"💨💨💨 V.Strong\"}},\n\t\t{label=\"lblModeList\",     func=3, start=0, len=1, list={[1]=\"🔥 Heat\",[2]=\"💧 Dry\",[3]=\"❄️ Cool\",[7]=\"🌀 Vent\",[8]=\"🔄 Auto\"}}\n\t}\n\n\tlocal function buildReadPayload(func, start, len)\n\t\tlocal payload = string.char(0x01, func)\n\t\t\t.. string.char(math.floor(start / 256), start % 256)\n\t\t\t.. string.char(math.floor(len / 256), len % 256)\n\t\treturn payload .. self:getCRC(payload)\n\tend\n\n\tlocal function processNextCommand(index)\n\t\tif index > #commands then\n\t\t\tself:debug(\"✅ All update commands processed.\")\n\t\t\tfinish()\n\t\t\treturn\n\t\tend\n\n\t\tlocal cmd = commands[index]\n\t\tlocal payload = buildReadPayload(cmd.func, cmd.start, cmd.len)\n\n\t\tself:debug(\"📡 Reading \" .. cmd.label .. \": \" .. self:hextostring(payload))\n\t\tsock:write(payload)\n\n\t\tsock:read({\n\t\t\tsuccess = function(data)\n\t\t\t\tself:debug(\"📥 Got \" .. cmd.label .. \": \" .. self:hextostring(data))\n\t\t\t\tif #data >= 5 then\n\t\t\t\t\tlocal rawValue = data:byte(4)*256 + data:byte(5)\n\t\t\t\t\tlocal displayValue\n\n\t\t\t\t\tif cmd.label == \"lblSetpointTemp\" or cmd.label == \"lblRoomTemp\" then\n\t\t\t\t\t\tlocal emoji = (cmd.label == \"lblSetpointTemp\") and \"🎯\" or \"🌡️\"\n\t\t\t\t\t\tdisplayValue = string.format(\"%s %.1f °C\", emoji, rawValue/10)\n\t\t\t\t\t\tif cmd.label == \"lblSetpointTemp\" then\n\t\t\t\t\t\t\tself.currentSetpoint = rawValue/10\n\t\t\t\t\t\t\tself:debug(\"💾 Stored setpoint: \" .. tostring(self.currentSetpoint))\n\t\t\t\t\t\tend\n\t\t\t\t\telseif cmd.list then\n\t\t\t\t\t\tdisplayValue = cmd.list[rawValue] or (\"❓ ?\" .. rawValue)\n\t\t\t\t\telse\n\t\t\t\t\t\tdisplayValue = tostring(rawValue)\n\t\t\t\t\tend\n\n\t\t\t\t\tself:updateView(cmd.label, \"text\", displayValue)\n\t\t\t\telse\n\t\t\t\t\tself:updateView(cmd.label, \"text\", \"❌ ERR\")\n\t\t\t\tend\n\n\t\t\t\tprocessNextCommand(index+1)\n\t\t\tend,\n\t\t\terror = function(msg)\n\t\t\t\tself:error(\"❌ Read error: \" .. msg)\n\t\t\t\tfinish()\n\t\t\tend\n\t\t})\n\tend\n\n\tsock:connect(ip, tonumber(port), {\n\t\tsuccess = function()\n\t\t\tself:debug(\"✅ Connected for update.\")\n\t\t\tprocessNextCommand(1)\n\t\tend,\n\t\terror = function(msg)\n\t\t\tself:error(\"❌ Connection error: \" .. msg)\n\t\t\tfinish()\n\t\tend\n\t})\nend\n"
     }
   ]
 }
