@@ -26,7 +26,7 @@ Fibaro HC3 QuickApp that controls and monitors Mitsubishi air conditioning via *
 
 The QuickApp periodically **polls** the MelcoBEMS (every 60 seconds) and updates the UI:
 
-| Data            | Description                    |
+| Data           | Description                    |
 |----------------|--------------------------------|
 | Room temp      | Current room temperature (°C)  |
 | Setpoint       | Target temperature (°C)        |
@@ -41,11 +41,11 @@ A manual **Update** button triggers an immediate poll. Overlapping updates are s
 
 Sending commands opens a TCP connection, sends a Modbus write, then triggers a refresh:
 
-- **Power** — On / Off  
-- **Mode** — Auto, Heat, Dry, Fan, Cool  
-- **Setpoint** — Plus / Minus (step 0.5 °C)  
-- **Fan speed** — Quiet, Weak, Strong, Very Strong  
-- **Vane** — Position 1–4, Auto  
+- **Power** — On / Off
+- **Mode** — Auto, Heat, Dry, Fan, Cool
+- **Setpoint** — Plus / Minus (step 0.5 °C)
+- **Fan speed** — Quiet, Weak, Strong, Very Strong
+- **Vane** — Position 1–4, Auto
 
 Modbus uses **function code 0x06** (write single register), **CRC16**, and device address **0x01**.
 
@@ -67,5 +67,5 @@ Modbus uses **function code 0x06** (write single register), **CRC16**, and devic
 
 ## Credits
 
-- Created for **Indome.ee / Kuuno**  
+- Created for **Indome.ee / Kuuno**
 - Refactored for readability and maintainability
