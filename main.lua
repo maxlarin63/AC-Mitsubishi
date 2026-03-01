@@ -16,6 +16,8 @@ function QuickApp:onInit()
 
 	ip   = self:getVariable("device_ip")
 	port = self:getVariable("device_port")
+	local debugVar = self:getVariable("debug")
+	self.debugEnabled = (debugVar == true or debugVar == "true" or debugVar == "1" or tostring(debugVar):lower() == "yes")
 
 	if not ip or ip == "" then
 		self:error("❌ Device IP is not set")
@@ -44,6 +46,13 @@ end
 --------------------------------------------------------
 -- 🔧 COMMON UTILITIES
 --------------------------------------------------------
+
+-- Debug log (only when QuickApp variable "debug" is true/1/yes)
+function QuickApp:debugLog(msg)
+	if self.debugEnabled then
+		self:debug(msg)
+	end
+end
 
 -- Converts string to hex representation
 function QuickApp:hextostring(str, spacer)
@@ -83,12 +92,12 @@ function QuickApp:sendModbusCommand(label, func, reg, value, callback)
 
 	sock:connect(ip, tonumber(port), {
 		success = function()
-			self:debug("📡 Sending " .. label .. ": " .. self:hextostring(payload))
+			self:debugLog("📡 Sending " .. label .. ": " .. self:hextostring(payload))
 			sock:write(payload)
 
 			sock:read({
 				success = function(data)
-					self:debug("📥 Received (" .. label .. "): " .. self:hextostring(data))
+					self:debugLog("📥 Received (" .. label .. "): " .. self:hextostring(data))
 					sock:close()
 					fibaro.sleep(1500)
 					if callback then callback(data) end
@@ -154,14 +163,14 @@ function QuickApp:ModePowerOff() self:sendModbusCommand("PowerOff",    0x06, 0x0
 
 function QuickApp:Update()
 	if self.isUpdating then
-		self:debug("⏳ Update already in progress, marking pending.")
+		self:debugLog("⏳ Update already in progress, marking pending.")
 		self.pendingUpdateRequested = true
 		return
 	end
 
 	self.isUpdating = true
 	self.pendingUpdateRequested = false
-	self:debug("🔄 Update triggered")
+	self:debugLog("🔄 Update triggered")
 
 	local sock = net.TCPSocket()
 
@@ -176,7 +185,7 @@ function QuickApp:Update()
 		self.pendingUpdateRequested = false
 
 		if shouldRestart then
-			self:debug("🔁 Running pending update.")
+			self:debugLog("🔁 Running pending update.")
 			self:Update()
 		end
 	end
@@ -199,7 +208,7 @@ function QuickApp:Update()
 
 	local function processNextCommand(index)
 		if index > #commands then
-			self:debug("✅ All update commands processed.")
+			self:debugLog("✅ All update commands processed.")
 			finish()
 			return
 		end
@@ -207,12 +216,12 @@ function QuickApp:Update()
 		local cmd = commands[index]
 		local payload = buildReadPayload(cmd.func, cmd.start, cmd.len)
 
-		self:debug("📡 Reading " .. cmd.label .. ": " .. self:hextostring(payload))
+		self:debugLog("📡 Reading " .. cmd.label .. ": " .. self:hextostring(payload))
 		sock:write(payload)
 
 		sock:read({
 			success = function(data)
-				self:debug("📥 Got " .. cmd.label .. ": " .. self:hextostring(data))
+				self:debugLog("📥 Got " .. cmd.label .. ": " .. self:hextostring(data))
 				if #data >= 5 then
 					local rawValue = data:byte(4)*256 + data:byte(5)
 					local displayValue
@@ -222,7 +231,7 @@ function QuickApp:Update()
 						displayValue = string.format("%s %.1f °C", emoji, rawValue/10)
 						if cmd.label == "lblSetpointTemp" then
 							self.currentSetpoint = rawValue/10
-							self:debug("💾 Stored setpoint: " .. tostring(self.currentSetpoint))
+							self:debugLog("💾 Stored setpoint: " .. tostring(self.currentSetpoint))
 						end
 					elseif cmd.list then
 						displayValue = cmd.list[rawValue] or ("❓ ?" .. rawValue)
@@ -246,7 +255,7 @@ function QuickApp:Update()
 
 	sock:connect(ip, tonumber(port), {
 		success = function()
-			self:debug("✅ Connected for update.")
+			self:debugLog("✅ Connected for update.")
 			processNextCommand(1)
 		end,
 		error = function(msg)

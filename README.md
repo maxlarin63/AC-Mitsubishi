@@ -52,16 +52,27 @@ Modbus uses **function code 0x06** (write single register), **CRC16**, and devic
 ### Technical details
 
 - **Protocol:** Modbus RTU frame over TCP (no MBAP header); CRC16 on every frame.
-- **QuickApp variables:** `device_ip` (e.g. USR-TCP232-24 IP), `device_port` (e.g. 4001).
-- **Default:** `10.0.1.4:4001` if variables are not set.
+- **QuickApp variables:**
+  - `device_ip` — USR-TCP232-24 IP (default `10.0.1.4` if unset).
+  - `device_port` — TCP port (default `4001` if unset).
+  - `debug` — Set to `true`, `1`, or `yes` to enable debug log lines (hex dumps, update steps). Omit or set to `false`/`0` to reduce log noise.
 
 ---
 
 ## Setup
 
-1. Install the QuickApp on the HC3 and set **device_ip** and **device_port** to the USR-TCP232-24 IP and port.
+1. Install the QuickApp on the HC3 and set **device_ip** and **device_port** to the USR-TCP232-24 IP and port. Optionally set **debug** to `true` or `1` to enable verbose debug output in the log.
 2. Ensure the USR-TCP232-24 is configured for Modbus RTU (baud, parity, etc.) to match the MelcoBEMS MINI (A1M).
 3. Wire: HC3 and USR-TCP232-24 on the same LAN; USR-TCP232-24 serial to MelcoBEMS MINI; MelcoBEMS to the Mitsubishi AC.
+
+---
+
+## Building
+
+The `.fqa` package is built with the [fqa](https://github.com/maxlarin63/fqa) tool (pack Fibaro QuickApp from project layout).
+
+- **CI:** Push a tag `v*` to build and attach the `.fqa` to a GitHub Release, or run the **Build FQA** workflow manually and download the artifact.
+- **Local:** Clone the fqa repo, then from this repo run: `python /path/to/fqa/fqa.py pack .` (output: `AC Mitsubishi.fqa` in the current directory).
 
 ---
 
