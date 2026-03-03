@@ -60,6 +60,28 @@ function QuickApp:hextostring(str, spacer)
 		function(c) return string.format("%02X%s", string.byte(c), spacer or " ") end))
 end
 
+-- UI helper: update labels optimistically after a successful write
+function QuickApp:updateUiFromWrite(reg, value)
+	if reg == 0x0001 then -- setpoint temperature
+		local temp = value / 10
+		self.currentSetpoint = temp
+		local display = string.format("🎯 %.1f °C", temp)
+		self:updateView("lblSetpointTemp", "text", display)
+	elseif reg == 0x0007 then -- power
+		local text = POWER_LABELS and POWER_LABELS[value]
+		if text then self:updateView("lblPowerList", "text", text) end
+	elseif reg == 0x0003 then -- vane
+		local text = VANE_LABELS and VANE_LABELS[value]
+		if text then self:updateView("lblVaneList", "text", text) end
+	elseif reg == 0x0002 then -- fan speed
+		local text = SPEED_LABELS and SPEED_LABELS[value]
+		if text then self:updateView("lblSpeedList", "text", text) end
+	elseif reg == 0x0000 then -- mode
+		local text = MODE_LABELS and MODE_LABELS[value]
+		if text then self:updateView("lblModeList", "text", text) end
+	end
+end
+
 -- CRC16 calculator (Modbus RTU)
 function QuickApp:getCRC(data)
 	local crc = 0xFFFF
@@ -99,9 +121,12 @@ function QuickApp:sendModbusCommand(label, func, reg, value, callback)
 				success = function(data)
 					self:debugLog("📥 Received (" .. label .. "): " .. self:hextostring(data))
 					sock:close()
-					fibaro.sleep(1500)
+					-- Optimistic UI refresh right after a successful write
+					self:updateUiFromWrite(reg, value)
+					-- Short pause after write to let device settle
+					fibaro.sleep(200)
 					if callback then callback(data) end
-					self:Update()
+					-- Do not trigger full Update here; periodic/manual Update will resync from device
 				end,
 				error = function(message)
 					self:error("❌ Read error: " .. message)
@@ -174,6 +199,12 @@ function QuickApp:Update()
 
 	local sock = net.TCPSocket()
 
+	-- Shared label maps (also used by updateUiFromWrite)
+	POWER_LABELS = {[1]="⚡ ON",[0]="⭕ OFF"}
+	VANE_LABELS  = {[0]="🔄 Auto",[1]="📍 Pos1",[2]="📍 Pos2",[3]="📍 Pos3",[4]="📍 Pos4",[5]="📍 Pos5",[7]="↔️ Swing"}
+	SPEED_LABELS = {[0]="🔄 Auto",[2]="🤫 Quiet",[3]="💨 Weak",[5]="💨💨 Strong",[6]="💨💨💨 V.Strong"}
+	MODE_LABELS  = {[1]="🔥 Heat",[2]="💧 Dry",[3]="❄️ Cool",[7]="🌀 Vent",[8]="🔄 Auto"}
+
 	local function finish()
 		if sock then
 			pcall(function() sock:close() end)
@@ -193,10 +224,10 @@ function QuickApp:Update()
 	local commands = {
 		{label="lblSetpointTemp", func=3, start=1, len=1},
 		{label="lblRoomTemp",     func=4, start=0, len=1},
-		{label="lblPowerList",    func=3, start=7, len=1, list={[1]="⚡ ON",[0]="⭕ OFF"}},
-		{label="lblVaneList",     func=3, start=3, len=1, list={[0]="🔄 Auto",[1]="📍 Pos1",[2]="📍 Pos2",[3]="📍 Pos3",[4]="📍 Pos4",[5]="📍 Pos5",[7]="↔️ Swing"}},
-		{label="lblSpeedList",    func=3, start=2, len=1, list={[0]="🔄 Auto",[2]="🤫 Quiet",[3]="💨 Weak",[5]="💨💨 Strong",[6]="💨💨💨 V.Strong"}},
-		{label="lblModeList",     func=3, start=0, len=1, list={[1]="🔥 Heat",[2]="💧 Dry",[3]="❄️ Cool",[7]="🌀 Vent",[8]="🔄 Auto"}}
+		{label="lblPowerList",    func=3, start=7, len=1, list=POWER_LABELS},
+		{label="lblVaneList",     func=3, start=3, len=1, list=VANE_LABELS},
+		{label="lblSpeedList",    func=3, start=2, len=1, list=SPEED_LABELS},
+		{label="lblModeList",     func=3, start=0, len=1, list=MODE_LABELS}
 	}
 
 	local function buildReadPayload(func, start, len)
