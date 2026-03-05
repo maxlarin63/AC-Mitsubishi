@@ -1,0 +1,43 @@
+name: Build FQA
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+jobs:
+  build-fqa:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install fqa
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "fqa==1.0.0"
+
+      - name: Pack QuickApp (.fqa)
+        run: |
+          fqa-pack --yes -o "AC Mitsubishi.fqa" .
+
+      - name: Upload FQA artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ac-mitsubishi-fqa
+          path: "AC Mitsubishi.fqa"
+
+      - name: Attach FQA to GitHub Release (on tags v*)
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: "AC Mitsubishi.fqa"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
