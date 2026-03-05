@@ -71,8 +71,19 @@ Modbus uses **function code 0x06** (write single register), **CRC16**, and devic
 
 The `.fqa` package is built with the [fqa](https://github.com/maxlarin63/fqa) tool (pack Fibaro QuickApp from project layout).
 
-- **CI:** Push a tag `v*` to build and attach the `.fqa` to a GitHub Release, or run the **Build FQA** workflow manually and download the artifact.
-- **Local:** Clone the fqa repo, then from this repo run: `python /path/to/fqa/fqa.py pack .` (output: `AC Mitsubishi.fqa` in the current directory).
+- **CI:**
+  - Push a tag `v*` to build and attach the `.fqa` to a GitHub Release, or run the **Build FQA** workflow manually and download the artifact.
+  - The workflow should check out a tagged fqa release (e.g. `ref: v1.0.0`) so CI and local builds use the same tool version.
+- **Local (direct fqa):**
+  - Clone the fqa repo.
+  - From this repo run: `python /path/to/fqa/fqa.py pack .` (output: `AC Mitsubishi.fqa` in the current directory).
+  - To see which fqa version you are using, run `python /path/to/fqa/fqa.py --version` (or `fqa --version` if installed on PATH).
+- **Local (via `fqa-pack` from this project):**
+  - Make sure `.fqa-tool-path` points to your `fqa` command (for example: `python "D:\HomeAutomation\fqa\fqa.py"`).
+  - From this repo run:
+    - `python fqa-pack.py -y -o dist` (cross‑platform), or
+    - `fqa-pack.bat -y -o dist` on Windows.
+  - The built `.fqa` will be placed under `dist\`.
 
 ---
 
